@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Stanbic IBTC Enhanced Pension Calculator</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Stanbic IBTC Enhanced Pension Calculator">
+    <meta property="og:image" content="https://sample.com/assets/img/logo.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stanbic IBTC Enhanced Pension Calculator">
+    <meta name="twitter:image" content="https://sample.com/assets/img/logo.svg">
+    <link rel="icon" type="image/svg+xml" sizes="128x150" href="assets/img/logo.svg">
+    <link rel="icon" type="image/svg+xml" sizes="128x150" href="assets/img/logo.svg">
+    <link rel="icon" type="image/svg+xml" sizes="128x150" href="assets/img/logo.svg">
+    <link rel="icon" type="image/svg+xml" sizes="128x150" href="assets/img/logo.svg">
+    <link rel="icon" type="image/svg+xml" sizes="128x150" href="assets/img/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div class="modal fade" role="dialog" tabindex="-1" id="emailme">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content"><div class="modal-header">
+    <h4 class="modal-title">Get Summary</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i data-toggle="tooltip" class="la la-close"></i></span></button></div>
+                <div class="modal-body">
+                    <form id="emailmeform">
+                        <div class="form-group"><label class="field-label" for="email">E-Mail Address</label><input class="form-control" type="email" id="email" autofocus="" autocomplete="on" inputmode="email" required=""></div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="consent"><label class="custom-control-label" for="consent">I give consent to receive financial advisory as well as marketing content on other services offered by the Stanbic IBTC Group.These content may help boost my financial well-being / retirement savings.<br></label></div>
+                        </div>
+                        <div class="d-flex summary-form-div mb-4"><i class="la la-unlock mr-2"></i>
+                            <p class="emailme-p">We'll keep your information confidential and it will not be shared any with third parties.</p>
+                        </div>
+                        <div class="form-group text-center"><button class="btn btn-primary" type="button">Email me this summary</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="faq">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content"><div class="modal-header">
+    <h4 class="modal-title">Faqs</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i data-toggle="tooltip" class="la la-close"></i></span></button></div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group"><i class="icon-magnifier icon"></i><input class="form-control search" type="search" id="search" name="search" placeholder="Search" data-type="accordion-search"></div>
+                        <div class="faq-div">
+                            <div role="tablist" id="FAQs">
+                                <div class="card accordion-item" data-type="accordion-section" data-filter="type1">
+                                    <div class="card-header accordion-header d-flex" role="tab"><i class="la la-plus mr-3 mt-1"></i>
+                                        <h5 class="mb-0" data-type="accordion-section-title"><a data-toggle="collapse" aria-expanded="false" aria-controls="FAQs .item-1" href="#FAQs .item-1" class="accordion-btn">What are the Pension Calculator and Budget Planner all about?</a></h5>
+                                    </div>
+                                    <div class="collapse item-1" role="tabpanel" data-parent="#FAQs">
+                                        <div class="card-body">
+                                            <p class="card-text accordion-p">The Pension Calculator and Budget Planner are designed to help guide your financial decisions in order to assist you to meet your retirement objectives.</p>
+                                            <p class="card-text accordion-p">By visualising the impact of your financial decisions, the tools would provide a sense of direction as to what you should undertake financially to meet your long-term goals.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card accordion-item" data-type="accordion-section" data-filter="type1">
+                                    <div class="card-header accordion-header d-flex" role="tab"><i class="la la-plus mr-3 mt-1"></i>
+                                        <h5 class="mb-0" data-type="accordion-section-title"><a data-toggle="collapse" aria-expanded="false" aria-controls="FAQs .item-2" href="#FAQs .item-2" class="accordion-btn">Why do I need to provide personal details?</a></h5>
+                                    </div>
+                                    <div class="collapse item-2" role="tabpanel" data-parent="#FAQs">
+                                        <div class="card-body">
+                                            <p class="card-text accordion-p">The personal details determine what your estimated monthly pension would be at retirement. Pension payments are determined by four factors: your age at retirement, gender, last salary and the value of your RSA balance at the time of your application. These parameters are important.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card accordion-item" data-type="accordion-section" data-filter="type1">
+                                    <div class="card-header accordion-header d-flex" role="tab"><i class="la la-plus mr-3 mt-1"></i>
+                                        <h5 class="mb-0" data-type="accordion-section-title"><a data-toggle="collapse" aria-expanded="false" aria-controls="FAQs .item-3" href="#FAQs .item-3" class="accordion-btn">Why do I need to provide personal details?</a></h5>
+                                    </div>
+                                    <div class="collapse item-3" role="tabpanel" data-parent="#FAQs">
+                                        <div class="card-body">
+                                            <p class="card-text accordion-p">The personal details determine what your estimated monthly pension would be at retirement. Pension payments are determined by four factors: your age at retirement, gender, last salary and the value of your RSA balance at the time of your application. These parameters are important.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card accordion-item" data-type="accordion-section" data-filter="type1">
+                                    <div class="card-header accordion-header d-flex" role="tab"><i class="la la-plus mr-3 mt-1"></i>
+                                        <h5 class="mb-0" data-type="accordion-section-title"><a data-toggle="collapse" aria-expanded="false" aria-controls="FAQs .item-4" href="#FAQs .item-4" class="accordion-btn">Why do I need to provide personal details?</a></h5>
+                                    </div>
+                                    <div class="collapse item-4" role="tabpanel" data-parent="#FAQs">
+                                        <div class="card-body">
+                                            <p class="card-text accordion-p">The personal details determine what your estimated monthly pension would be at retirement. Pension payments are determined by four factors: your age at retirement, gender, last salary and the value of your RSA balance at the time of your application. These parameters are important.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="contact">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content"><div class="modal-header">
+    <h4 class="modal-title">Contact</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i data-toggle="tooltip" class="la la-close"></i></span></button></div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-3"><a class="link" href="tel:+234700909909909"><i class="icon-call-out mr-2"></i>0700 909 909 909</a></div>
+                        <div class="col-md-8 mb-3"><a class="link" href="mailto:customercarenigeria@stanbicibtc.com"><i class="icon-envelope-letter mr-2"></i>customercarenigeria@stanbicibtc.com</a></div>
+                        <div class="col text-center"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPtkEZuUNo9ZQQ_z0UscObhQYNZ_pz5m0&amp;q=Walter+Carrington+Cres%2C+Victoria+Island%2C+Lagos&amp;zoom=11" width="100%" height="400"></iframe><a class="btn btn-primary mt-4" role="button" href="https://www.stanbicibtcbank.com/nigeriabank/personal/contact-us" target="_blank">Contact Us</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="vh--80 bg-header level1">
+        <div class="glass pt-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mb-5">
+                        <nav class="navbar navbar-light navbar-expand-md">
+                            <div class="container-fluid"><a class="navbar-brand" id="logo" href="#"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"><i class="icon-options"></i></span></button>
+                                <div class="collapse navbar-collapse" id="navcol-1">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item mr-4"><a class="nav-link navlink" href="#faq" data-target="#faq" data-toggle="modal">Faqs</a></li>
+                                        <li class="nav-item"><a class="nav-link nav-btn" href="#contact" data-target="#contact" data-toggle="modal">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="w-75 m-auto text-center hero-div">
+                            <h1 class="hero-h1 mb-0">Welcome to <span class="hero-span">Stanbic Pensions</span></h1>
+                            <p class="hero-p">Enjoy good and competitive returns on your investment with us.</p>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col bg-pattern">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-grey vh--40 level2">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card custom-postion">
+                        <div class="card-body">
+                            <div>
+                                <ul class="nav nav-pills nav-fill" role="tablist">
+                                    <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="pill" href="#pension-calculator">Pension Calculator</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="pill" href="#budget-calculator">Budget Calculator</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" role="tabpanel" id="pension-calculator">
+                                        <div>
+                                            <!-- Start: Pension Calculator -->
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <form class="mb-5">
+                                                        <div class="q-div">
+                                                            <div>
+                                                                <ul class="nav nav-tabs hidden" role="tablist">
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#profile">QUESTION 1</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#income-contribution">QUESTION 2</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#savings">QUESTION 3</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#goal">QUESTION 3</a></li>
+                                                                </ul>
+                                                                <div class="tab-content">
+                                                                    <div class="tab-pane fade show active" role="tabpanel" id="profile">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding card-height-reset">
+                                                                                <h2 class="title">Profile</h2>
+                                                                                <div class="form-row">
+                                                                                    <div class="col-md-12">
+                                                                                        <p class="q-p">Select your gender<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="Select your gender/sex"></i></p>
+                                                                                        <div class="form-group d-flex">
+                                                                                            <div class="text-center mr-5"><input type="radio" id="male" class="gender-radio" name="gender" value="male"><i class="la la-male" style="font-size: 2.4rem;"></i><label class="d-block" for="male">Male</label></div>
+                                                                                            <div class="text-center"><input type="radio" id="female" class="gender-radio" name="gender" value="female"><i class="la la-female" style="font-size: 2.4rem;"></i><label class="d-block" for="female">Female</label></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-row">
+                                                                                    <div class="col-md-12">
+                                                                                        <p class="q-p">Select your age range<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="Select your current age and your age of retirement. You can you the slider or the input box to enter the data."></i></p>
+                                                                                    </div>
+                                                                                    <div class="col-md-2">
+                                                                                        <div class="form-group text-center">
+                                                                                            <!-- Start: Input Group -->
+                                                                                            <div class="input-group"><input class="form-control" type="number" id="ca" max="65" min="18" step="1" value="18" oninput="car.value=ca.value"></div><!-- End: Input Group --><label class="text-nowrap" for="ca">Current Age</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-8 pr-5">
+                                                                                        <div class="form-group">
+                                                                                            <div class="rangeslider"><input class="form-control-range multi-range min" type="range" id="rar" name="rar" min="40" max="60" value="55" step="1" oninput="ra.value=rar.value"><input class="form-control-range multi-range max" type="range" id="car" name="age" min="18" max="60" step="1" value="36" oninput="ca.value=car.value"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-2 text-center">
+                                                                                        <div class="form-group mmt--5">
+                                                                                            <!-- Start: Input Group -->
+                                                                                            <div class="input-group"><input class="form-control" type="number" id="ra" max="65" min="25" step="1" value="40" oninput="rar.value=ra.value"></div><!-- End: Input Group --><label class="text-nowrap" for="ra">Retirement Age</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div><a class="btn btn-link nextbtn" role="button">Continue<i class="la la-arrow-right ml-1"></i></a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" role="tabpanel" id="income-contribution">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding card-height-reset">
+                                                                                <h2 class="title">Income &amp; contributions</h2>
+                                                                                <div class="form-row mb-4">
+                                                                                    <div class="col-md-9 pr-5">
+                                                                                        <div class="form-group"><label class="field-label mb-4" for="monthlyincome">Monthly Income<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="What is your monthly income after tax?"></i></label><input class="custom-range" type="range" id="monthlyincome" value="0" min="0" max="10000000" step="1000" name="monthlyincome" oninput="monthlyincomeinput.value=monthlyincome.value"></div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group">
+                                                                                            <!-- Start: Input Group -->
+                                                                                            <div class="input-group mt-5">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="text" id="monthlyincomeinput" oninput="monthlyincome.value=monthlyincomeinput.value" value="0" onblur="reFormatStringWithCommas(this.id)">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-row">
+                                                                                    <div class="col-md-9 pr-5">
+                                                                                        <div class="form-group"><label class="field-label mb-4" for="monthlypensioncon">Monthly Pension Contribution<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="What is your estimated monthly pension contribution?"></i></label><input class="custom-range" type="range" id="monthlypensioncon" value="10000" min="10000" max="10000000" step="1000" name="monthlypensioncon" oninput="monthlypensionconinput.value=monthlypensioncon.value"></div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group">
+                                                                                            <!-- Start: Input Group -->
+                                                                                            <div class="input-group mt-5">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="text" id="monthlypensionconinput" oninput="monthlypensioncon.value=monthlypensionconinput.value" value="0" onblur="reFormatStringWithCommas(this.id)">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div class="float-right"><a class="btn btn-link nextbtn" role="button">Continue<i class="la la-arrow-right ml-1"></i></a></div>
+                                                                            <div><a class="btn prevbtn btn-link" role="button"><i class="la la-arrow-left mr-1"></i>Back</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" role="tabpanel" id="savings">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding card-height-reset">
+                                                                                <h2 class="title">Savings</h2>
+                                                                                <div class="form-row mb-4">
+                                                                                    <div class="col-md-9 pr-5">
+                                                                                        <div class="form-group"><label class="field-label mb-4" for="rsabr">Retirement Savings Account Balance<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="What is your Retirement Savings Account balance?"></i></label><input class="custom-range" type="range" id="rsabr" value="0" min="0" max="10000000" step="1000" name="rsabr" oninput="rsab.value=rsabr.value"></div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group">
+                                                                                            <!-- Start: Input Group -->
+                                                                                            <div class="input-group mt-5">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="text" id="rsab" value="0" oninput="rsabr.value=rsab.value" onblur="reFormatStringWithCommas(this.id)">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-row">
+                                                                                    <div class="col-md-9 pr-5">
+                                                                                        <div class="form-group"><label class="field-label mb-4" for="vcbr">Voluntary Contribution Balance<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="What is your estimated Voluntary Contribution balance?"></i></label><input class="custom-range" type="range" id="vcbr" value="0" min="0" max="10000000" step="1000" name="vcbr" oninput="vcb.value=vcbr.value"></div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group">
+                                                                                            <!-- Start: Input Group -->
+                                                                                            <div class="input-group mt-5">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="text" id="vcb" oninput="vcbr.value=vcb.value" value="0" onblur="reFormatStringWithCommas(this.id)">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div class="float-right"><a class="btn btn-link nextbtn" role="button">Continue<i class="la la-arrow-right ml-1"></i></a></div>
+                                                                            <div><a class="btn prevbtn btn-link" role="button"><i class="la la-arrow-left mr-1"></i>Back</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" role="tabpanel" id="goal">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding card-height-reset">
+                                                                                <h2 class="title">Goal</h2>
+                                                                                <div class="form-row mb-4">
+                                                                                    <div class="col-md-12 pr-5">
+                                                                                        <div class="form-group"><label class="field-label mb-4 d-block" for="age">Goal Type<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="Select a type of goal; Lump sum or Programmed withdrawal"></i></label>
+                                                                                            <div class="custom-control custom-control-inline custom-radio"><input class="custom-control-input" type="radio" id="lumpsum" name="goaltype" value="lumpsum"><label class="custom-control-label label pt-1" for="lumpsum">Lump Sum</label></div>
+                                                                                            <div class="custom-control custom-control-inline custom-radio"><input class="custom-control-input" type="radio" id="programmedwithdrwal" name="goaltype" value="programmed withdrwal"><label class="custom-control-label label pt-1" for="programmedwithdrwal">Programmed Withdrawal</label></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-row">
+                                                                                    <div class="col-md-9 pr-5">
+                                                                                        <div class="form-group"><label class="field-label mb-4" for="dmspr">Desired Monthly Pension at Retirement<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="What is your desired monthly pension at retirement?"></i></label><input class="custom-range" type="range" id="dmspr" value="0" min="0" max="10000000" step="1000" name="dmspr" oninput="dmsp.value=dmspr.value"></div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group">
+                                                                                            <!-- Start: Input Group -->
+                                                                                            <div class="input-group mt-5">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr desired-monthly-pension-retirement" type="text" id="dmsp" oninput="dmspr.value=dmsp.value" value="0" onblur="reFormatStringWithCommas(this.id)">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div><a class="btn prevbtn btn-link" role="button"><i class="la la-arrow-left mr-1"></i>Back</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-md-5 align-self-center fixed-col-height">
+                                                    <div id="gauge"><img class="img-fluid" src="assets/img/dial.svg">
+                                                        <div id="needle" style="transform: rotate(120deg);"></div>
+                                                        <p class="lead text-center projected-label">Projected</p>
+                                                    </div>
+                                                    <div class="card card-stanbic text-center card-no-bg custom-padding">
+                                                        <div class="card-body">
+                                                            <h1 class="card-title calculated-h">₦500,000.00<i class="la la-info-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="bottom" title="Lorem gravida felis rhoncus ac proin aliquet sem aliquam, pharetra enim. Porttitor et lacus augue,"></i></h1>
+                                                            <p class="card-text result-p">To see our recommendations, please provide values in the Contribution or Savings tabs, and state your retirement goal in the Goals tab.</p>
+                                                            <div id="getsummarybtn" class="text-center" style="display: none;"><a class="btn btn-primary" role="button" href="#emailme" data-target="#emailme" data-toggle="modal">Get Summary</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End: Pension Calculator -->
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="budget-calculator">
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <form class="mb-5">
+                                                        <div class="q-div">
+                                                            <div>
+                                                                <ul class="nav nav-tabs hidden" role="tablist">
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#income">QUESTION 1</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#housing">QUESTION 2</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#transport">QUESTION 3</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#education">QUESTION 3</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#personal">QUESTION 3</a></li>
+                                                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#budget-savings">QUESTION 3</a></li>
+                                                                </ul>
+                                                                <div class="tab-content">
+                                                                    <div class="tab-pane fade" role="tabpanel" id="income">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding" style="height: 368px;width: auto;">
+                                                                                <h2 class="title">INCOME</h2>
+                                                                                <div class="form-row">
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="form-group"><label class="field-label" for="salary">Current Salary?<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="Enter how much you earn from your salary"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="salary">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="form-group"><label class="field-label" for="other-income">Other Income?<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you earn from other sources of income?" kk=""></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="other-income">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div><a class="btn btn-link nextbtn" role="button">Continue<i class="la la-arrow-right ml-1"></i></a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" role="tabpanel" id="housing">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding" style="height: 368px;width: auto;">
+                                                                                <h2 class="title">housing</h2>
+                                                                                <div class="form-row mb-4">
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="form-group"><label class="field-label" for="rent-mortage">Rent / Mortgages<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you pay for rent or mortgage?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="rent-mortage">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="water-gas-electricity">Water / Gas / Electricity<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on water, gas and or electricity?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="water-gas-electricity">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="domestic-staffs">Domestic Staff<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you pay your domestic staff(s)?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="domestic-staffs">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group"><label class="field-label" for="repairs-maintenance">Repairs / Maintenance<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on repair and or maintenance?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="repairs-maintenance">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="cable-tv-internet">Cable / TV / Internet<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on cable, tv and or internet?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="cable-tv-internet">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="groceries">Groceries<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on groceries?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="groceries">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div class="float-right"><a class="btn btn-link nextbtn" role="button">Continue<i class="la la-arrow-right ml-1"></i></a></div>
+                                                                            <div><a class="btn prevbtn btn-link" role="button"><i class="la la-arrow-left mr-1"></i>Back</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" role="tabpanel" id="transport">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding" style="height: 368px;width: auto;">
+                                                                                <h2 class="title">Transport</h2>
+                                                                                <div class="form-row mb-4">
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="form-group"><label class="field-label" for="fuel-petrol">Petrol / Fuel<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on fuel?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="fuel-petrol">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="taxi-cab">Taxi / Cab<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on taxis?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="taxi-cab">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="car-insurance">Car Insurance<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on car insurance?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="car-insurance">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group"><label class="field-label" for="car-repairs">Car Repairs<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on repairing your car or vehicle?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="car-repairs">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="car-loan">Car Loan<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on car/vehicle loans?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="car-loan">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div class="float-right"><a class="btn btn-link nextbtn" role="button">Continue<i class="la la-arrow-right ml-1"></i></a></div>
+                                                                            <div><a class="btn prevbtn btn-link" role="button"><i class="la la-arrow-left mr-1"></i>Back</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade show active" role="tabpanel" id="education">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding" style="height: 368px;width: auto;">
+                                                                                <h2 class="title">Education</h2>
+                                                                                <div class="form-row mb-4">
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="form-group"><label class="field-label" for="school-fees">School Fees<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on school fees?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="school-fees">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group"><label class="field-label" for="school-stationery-suppies">School Stationery / Supplies<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on school stationery and or supplies?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="school-stationery-suppies">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group card-body-padding">
+                                                                                <div class="float-right"><a class="btn btn-link nextbtn" role="button">Continue<i class="la la-arrow-right ml-1"></i></a></div>
+                                                                                <div><a class="btn prevbtn btn-link" role="button"><i class="la la-arrow-left mr-1"></i>Back</a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" role="tabpanel" id="personal">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding" style="height: 368px;width: auto;">
+                                                                                <h2 class="title">Personal</h2>
+                                                                                <div class="form-row mb-4">
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="form-group"><label class="field-label" for="clothing">Clothing<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on clothing?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="clothing">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="entertainment">Entertainment<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on entertainment?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="entertainment">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="mobile-phone-calls">Mobile / Phone Calls<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on mobile phone calls?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="mobile-phone-calls">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group"><label class="field-label" for="medical-healthcare">Medical / Healthcare<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on medical/healthcare?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="medical-healthcare">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="family-allowances">Family Allowances<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on family allowances?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="family-allowances">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="debt-repayment">Debt Repayment<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you spend on debt repayment?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="debt-repayment">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div class="float-right"><a class="btn btn-link nextbtn" role="button">Continue<i class="la la-arrow-right ml-1"></i></a></div>
+                                                                            <div><a class="btn prevbtn btn-link" role="button"><i class="la la-arrow-left mr-1"></i>Back</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade" role="tabpanel" id="budget-savings">
+                                                                        <div class="card mt-2 d-block card-no-bg">
+                                                                            <div class="card-body card-body-padding" style="height: 368px;width: auto;">
+                                                                                <h2 class="title">Savings</h2>
+                                                                                <div class="form-row mb-4">
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="form-group"><label class="field-label" for="emergency-fund">Emergency Fund<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much have you saved as emergency fund?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="emergency-fund">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="wellbeing-voluntary-contribution">&nbsp;Voluntary Contribution<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much saved from wellbeing /voluntary contribution?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="wellbeing-voluntary-contribution">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="mid-term-goals">Mid-Term Goals<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="What are your mid term savings goals?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="mid-term-goals">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="form-group"><label class="field-label" for="other-investment">Other Investment<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much have you saved from other investment?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="other-investment">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="travel">Travel<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="How much do you save on travel?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="travel">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                        <div class="form-group"><label class="field-label" for="long-term-goals">Long-Term Goals<i class="la la-info-circle ml-1" data-toggle="tooltip" data-bss-tooltip="" title="What are your long term savings goals?"></i></label><!-- Start: Input Group -->
+                                                                                            <div class="input-group">
+                                                                                                <div class="input-group-prepend"><span class="input-group-text blr">₦</span></div><input class="form-control blr" type="number" id="long-term-goals">
+                                                                                            </div><!-- End: Input Group -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group card-body-padding">
+                                                                            <div><a class="btn prevbtn btn-link" role="button"><i class="la la-arrow-left mr-1"></i>Back</a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-md-5 align-self-center fixed-col-height">
+                                                    <div class="card card-stanbic text-center card-no-bg custom-padding">
+                                                        <div class="card-body">
+                                                            <div style="height: 300px;"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Housing&quot;,&quot;Transportation&quot;,&quot;Education&quot;,&quot;Personal&quot;,&quot;Savings&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Budget&quot;,&quot;backgroundColor&quot;:[&quot;rgb(17,155,210)&quot;,&quot;#8363f9&quot;,&quot;#fdc42a&quot;,&quot;#fe67ad&quot;,&quot;#b1c94e&quot;],&quot;borderColor&quot;:[&quot;#e2e8ec&quot;,&quot;#e2e8ec&quot;,&quot;#e2e8ec&quot;,&quot;#e2e8ec&quot;,&quot;#e2e8ec&quot;],&quot;data&quot;:[&quot;20&quot;,&quot;20&quot;,&quot;20&quot;,&quot;20&quot;,&quot;20&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:true,&quot;position&quot;:&quot;bottom&quot;,&quot;reverse&quot;:false},&quot;title&quot;:{}}}"></canvas></div>
+                                                            <h1 class="text-nowrap card-title calculated-h">₦500,000.00<i class="la la-info-circle" data-toggle="tooltip" data-bss-tooltip="" data-placement="bottom" title="Lorem gravida felis rhoncus ac proin aliquet sem aliquam, pharetra enim. Porttitor et lacus augue,"></i></h1>
+                                                            <p class="card-text">To see our recommendation, please fill the fields in each of the tabs</p>
+                                                            <div id="getsummarybtn2" class="text-center" style="display: none;"><a class="btn btn-primary" role="button" href="#emailme" data-target="#emailme" data-toggle="modal">Get Summary</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-grey">
+        <!-- Start: stanbic feature box -->
+        <div class="container feature-container">
+            <div class="row no-gutters">
+                <div class="col-md-3 text-center white-box pt-5 pb-5 pl-4 pr-4 feature-box">
+                    <!-- Start: Shield -->
+                    <div class="shield-position">
+                        <div class="shield p-4"><i class="la la-unlock"></i></div>
+                    </div><!-- End: Shield -->
+                    <h1 class="feature-h">Safety</h1>
+                    <p class="feature-p">Stanbic IBTC Pension Managers Limited is backed by strong and reputable financial institutions</p>
+                </div>
+                <div class="col-md-3 box-dark text-center pt-5 pb-5 pl-4 pr-4 feature-box">
+                    <!-- Start: Shield -->
+                    <div class="shield-position">
+                        <div class="shield p-4"><i class="la la-user"></i></div>
+                    </div><!-- End: Shield -->
+                    <h1 class="feature-h">Convenience</h1>
+                    <p class="feature-p">Ease of Account Access via Internet, telephone, e-mail and SMS, as well as ease of retirement pay-outs</p>
+                </div>
+                <div class="col-md-3 text-center white-box pt-5 pb-5 pl-4 pr-4 feature-box">
+                    <!-- Start: Shield -->
+                    <div class="shield-position">
+                        <div class="shield p-4"><i class="la la-check-circle"></i></div>
+                    </div><!-- End: Shield -->
+                    <h1 class="feature-h">Track Record</h1>
+                    <p class="feature-p">The Stanbic IBTC Group has been managing funds for companies and individuals for over 2 decades</p>
+                </div>
+                <div class="col-md-3 box-dark text-center pt-5 pb-5 pl-4 pr-4 feature-box">
+                    <!-- Start: Shield -->
+                    <div class="shield-position">
+                        <div class="shield p-4"><i class="la la-area-chart"></i></div>
+                    </div><!-- End: Shield -->
+                    <h1 class="feature-h">Returns</h1>
+                    <p class="feature-p">Enjoy good and competitive returns on your pension investment</p>
+                </div>
+            </div>
+        </div><!-- End: stanbic feature box -->
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
